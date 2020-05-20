@@ -30,3 +30,17 @@ Pytorch 1.0.0
     python ./create_Pmatrix.py
     python ./train_Pbsr.py --model ResNet10 --train_aug
     ```
+2. Fine-tune and test for the 5-shot task in CropDisease as an example (change 'n_shot' parameter to 20, 50 for 20-shot and 50-shot evaluations and change 'dtarget' parameter to EuroSAT, ISIC, ChestX for the other target domains)
+
+    • *Test the BSR and BSR+LP methods*
+    
+    ```bash
+     python finetune_lp.py --model ResNet10 --train_aug --use_saved --dtarget EuroSAT --n_shot 5
+    ```
+    
+    The ‘use_saved' flag is used to test with our saved models. You can close it to test with the reproduced models
+    
+    Example output:
+    
+        BSR: 600 Test Acc = 92.17% +- 0.45%
+        BSR+LP: 600 Test Acc = 94.45% +- 0.40%
