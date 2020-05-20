@@ -1,8 +1,8 @@
 save_dir                    = './models'
 
-miniImageNet_path           	= '/nfs/project/dataset/fwl-cvpr/miniImagenet'
+miniImageNet_path           	= '/ssd/miniImagenet'
 
-ISIC_path = "/nfs/project/dataset/fwl-cvpr/ISIC"
-ChestX_path = "/nfs/project/dataset/fwl-cvpr/chestX"
-CropDisease_path = "/nfs/project/dataset/fwl-cvpr/CropDiseases"
-EuroSAT_path = "/nfs/project/dataset/fwl-cvpr/EuroSAT"
+ISIC_path = "/ssd/data/ISIC"
+ChestX_path = "/ssd/data/chestX"
+CropDisease_path = "/ssd/data/CropDiseases"
+EuroSAT_path = "/ssd/data/EuroSAT/2750"
