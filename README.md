@@ -10,7 +10,11 @@ Pytorch 1.0.0
 
 ## Steps
 
-1. Train base models on miniImageNet (pre-train)
+1. Prepare the source dataset miniImageNet and four target datasets CropDisease, EuroSAT, ISIC and ChestX.
+
+2. Modify the paths of the datasets in `configs.py` according to the real paths.
+
+3. Train base models on miniImageNet (pre-train)
 
     • *Train single model*
     
@@ -24,7 +28,7 @@ Pytorch 1.0.0
     python ./create_Pmatrix.py
     python ./train_Pbsr.py --model ResNet10 --train_aug
     ```
-2. Fine-tune and test for the 5-shot task in CropDisease as an example (change `n_shot` parameter to 20, 50 for 20-shot and 50-shot evaluations and change `dtarget` parameter to EuroSAT, ISIC, ChestX for the other target domains)
+4. Fine-tune and test for the 5-shot task in CropDisease as an example (change `n_shot` parameter to 20, 50 for 20-shot and 50-shot evaluations and change `dtarget` parameter to EuroSAT, ISIC, ChestX for the other target domains)
 
     • *Test the BSR and BSR+LP methods for single model*
     
