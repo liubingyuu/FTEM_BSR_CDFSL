@@ -22,5 +22,4 @@ class PFinetune(nn.Module):
         out3 = self.resnet3(out2)
         fea_b = self.layer1(out3)
         fea_e = torch.mm(fea_b, self.P_matrix)
-        scores = self.classifier(fea_e)
-        return scores
+        return fea_e
