@@ -1,6 +1,6 @@
 # Feature Transformation Ensemble Model with Batch Spectral Regularization for Cross-Domain Few-Shot Classification
 
-Code release for Cross-Domain Few-Shot Learning (CD-FSL) Challenge.
+Code release for Track 1 in Cross-Domain Few-Shot Learning (CD-FSL) Challenge .
 
 ## Enviroment
 
