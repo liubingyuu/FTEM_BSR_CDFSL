@@ -148,7 +148,7 @@ def finetune(novel_loader, n_query=15, freeze_backbone=False, n_way=5, n_support
                 pretrained_model[i].eval()
                 classifier[i].eval()
                 for x_b_i_tmp in x_b_i:
-                    _, _, _, _, output = pretrained_model[i](x_b_i_tmp)
+                    output = pretrained_model[i](x_b_i_tmp)
                     scores_tmp = classifier[i](output)
                     scores_tmp = F.softmax(scores_tmp, 1)
 
