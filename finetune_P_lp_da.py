@@ -144,12 +144,12 @@ def finetune(novel_loader, n_query=15, freeze_backbone=False, n_way=5, n_support
         n_lp = len(y_query)
         del_n = int(n_lp * (1.0 - params.delta))
         with torch.no_grad():
-            for i in range(params.M):
-                pretrained_model[i].eval()
-                classifier[i].eval()
+            for k in range(params.M):
+                pretrained_model[k].eval()
+                classifier[k].eval()
                 for x_b_i_tmp in x_b_i:
-                    output = pretrained_model[i](x_b_i_tmp)
-                    scores_tmp = classifier[i](output)
+                    output = pretrained_model[k](x_b_i_tmp)
+                    scores_tmp = classifier[k](output)
                     scores_tmp = F.softmax(scores_tmp, 1)
 
                     scores_ori += scores_tmp
